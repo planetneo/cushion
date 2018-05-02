@@ -2,7 +2,7 @@ import os, distutils, shutil
 
 path = "/Users/Neo/Music/Logic"
 src = "/Users/Neo/Music/Logic/"
-dest = "/Volumes/Googledrive/My Drive/Backup/Audio/LogicProjects"
+dest = "/Volumes/Googledrive/My Drive/Backup/Audio/LogicProjects/"
 list = os.listdir(path)
 
 itemAmount = 0
