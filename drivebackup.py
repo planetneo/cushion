@@ -1,4 +1,7 @@
-import os, distutils, shutil
+import os
+import shutil
+import distutils
+from distuils import dir_util
 
 path = "/Users/Neo/Music/Logic"
 src = "/Users/Neo/Music/Logic/"
@@ -7,7 +10,7 @@ list = os.listdir(path)
 
 itemAmount = 0
 
-if len(os.listdir(dest)) == 0:
+if len(os.listdir(dest)) == 0: # Checks if the directory is empty. If it is, copies files into it
     print("Destination directory empty, copying files.")
 
     for i in range(len(list)):
@@ -19,7 +22,7 @@ if len(os.listdir(dest)) == 0:
         itemAmount += 1
         
     print("backup complete. \rcopied " + itemAmount + " items")
-else:
+else: # When directory is not empty, overwrite and backup. 
     for i in range(len(list)):
         
         statusSource = src+list[i]+"/Resources/ProjectInformation.plist"
