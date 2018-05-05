@@ -33,7 +33,12 @@ else: # When directory is not empty, overwrite and backup.
                 if str(list[i]) == str(list[j]) and format(os.stat(statusSource).st_mtime) != format(os.stat(statusSourceVol).st_mtime) and not list[i].startswith('.'):
                     itemAmount += 1
                     print("copying: " + list[i])
-                    distutils.dir_util.copy_tree(src+list[i], dest)#+list[j]
+                    try:
+                        distutils.dir_util.copy_tree(src+list[i], dest)#+list[j]
+                    except FileNotFoundError:
+                        print(src+list[i] + " not found, skipping")
+                        pass
+                    
 
 print("backup complete.")
 print("saved " + str(itemAmount) + " out of " + str(len(list)) + " items")
