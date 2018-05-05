@@ -1,7 +1,7 @@
 import os
 import shutil
 import distutils
-from distuils import dir_util
+from distutils import dir_util
 
 path = "/Users/Neo/Music/Logic"
 src = "/Users/Neo/Music/Logic/"
