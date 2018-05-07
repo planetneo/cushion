@@ -21,7 +21,7 @@ if len(os.listdir(dest)) == 0: # Checks if the directory is empty. If it is, cop
             shutil.copy(src+list[i], dest)
         itemAmount += 1
         
-    print("backup complete. \rcopied " + itemAmount + " items")
+    print("backup complete. \rcopied " + str(itemAmount) + " items")
 else: # When directory is not empty, overwrite and backup. 
     for i in range(len(list)):
         
